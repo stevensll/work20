@@ -60,7 +60,7 @@ int client_handshake(int *to_server) {
     from_server = open(sp, O_RDONLY);
     char * response = calloc(BUFFER_SIZE, sizeof(char));
     read(from_server,response,BUFFER_SIZE);
-    printf("Got response from server:%s\n", response);
+    printf("Got response from server: %s\n", response);
     
     //5.client gets response and removes sp
     remove(sp);
