@@ -16,7 +16,7 @@ int server_handshake(int *to_client) {
     //1. server handles client sp
     char sp[HANDSHAKE_BUFFER_SIZE];
     read(from_client, sp, sizeof(sp));
-    printf("Secret pipe id: %d\n", sp);
+    printf("Secret pipe id: %s\n", sp);
     //4. server gets client message, removes wkp
     remove(WKP);
     //5. server sends client response
